@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Velvetique;
+    src: url(fonts/Velvetique.otf);
+}
+
+body {
+    font-family: Velvetique;
+    background: #fafafa;
+}
+
+.name {
+    font-size: 15rem;
+    letter-spacing: 150px;
+    color: #333;
+    margin-left: 10rem;
+}
