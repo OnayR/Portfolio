@@ -16,7 +16,7 @@
 
 body {
     font-family: WremenaLight;
-    background: #fafafa;
+    background: rgb(30, 33, 37)
 }
 
 .lastname {
@@ -29,28 +29,15 @@ body {
         transform: translateY(100%);
     }
 
-    25% {
-        transform: translateY(25%);
-    }
-
-    50% {
-        transform: translateY(10%);
-    }
-
-    75% {
-        transform: translateY(5%);
-    }
-
     100% {
         transform: translateY(0);
     }
 }
 
 .name {
+    color: #e9dfce;
     font-size: 15rem;
-    color: #333;
     margin-left: 10rem;
     font-style: italic;
-    animation: 2s ease-out 0s 1 slideInFromBottom;
-    padding: 30px;
+    animation: 1.5s ease-in-out 0s 1 slideInFromBottom;
 }
