@@ -24,6 +24,14 @@ body {
     font-weight: bold;
 }
 
+.spacer {
+    height: 100vh;
+}
+
+.spacer2 {
+    height: 40vh;
+}
+
 @keyframes slideInFromBottom {
     0% {
         transform: translateY(100%);
@@ -34,10 +42,98 @@ body {
     }
 }
 
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes return {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
 .name {
     color: #e9dfce;
     font-size: 15rem;
     margin-left: 10rem;
     font-style: italic;
-    animation: 1.5s ease-in-out 0s 1 slideInFromBottom;
+    animation: 0.7s ease-out 0s 1 slideInFromBottom;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+}
+
+.header-link {
+    display: block;
+    text-align: center;
+    font-family: WremenaRegular;
+    font-style: italic;
+}
+
+.menu-container {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    font-size: 100px;
+    z-index: 1;
+}
+
+.menu-button {
+    display: block;
+    position: fixed;
+    right: 45px;
+    top: 45px;
+    width: 29px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 5px;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.menu-button-container {
+    z-index: 2;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 45px;
+    top: 45px;
+    transition: 0.3s;
+}
+
+.menu-button-container:hover>.menu-button {
+    background-color: #e9dfce;
+    transform: scale(1.1);
+}
+
+.line2 {
+    top: 53px;
+}
+
+.logo {
+    display: block;
+    position: fixed;
+}
+
+.description {
+    color: #e9dfce;
+    width: 35%;
+    font-size: 1.2rem;
+    margin-left: 20rem;
+    margin-top: 1rem;
 }
