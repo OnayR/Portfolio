@@ -14,14 +14,37 @@
     src: url("fonts/WremenaRegular.otf");
 }
 
+@font-face {
+    font-family: mrDafoe;
+    src: url("fonts/mrDafoe-Regular.ttf");
+}
+
 body {
     font-family: WremenaLight;
     background: rgb(30, 33, 37)
 }
 
+a {
+    text-decoration: none;
+    color: #e9dfce;
+}
+
 .lastname {
     font-family: WremenaRegular;
     font-weight: bold;
+}
+
+.signature {
+    font-family: mrDafoe;
+    font-size: 2rem;
+    color: #e9dfce;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    z-index: -1;
+}
+
+.signature:hover {
+    cursor: pointer;
 }
 
 .spacer {
@@ -74,6 +97,7 @@ body {
 .header {
     display: flex;
     position: fixed;
+    z-index: 5;
 }
 
 .header-link {
@@ -136,4 +160,60 @@ body {
     font-size: 1.2rem;
     margin-left: 20rem;
     margin-top: 1rem;
+}
+
+.skill-card {
+    position: relative;
+    width: 25vw;
+    height: 60vh;
+    background-color: #e9dfce;
+    border-radius: 10px;
+    margin-left: 10rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: rotate3d(1, 1, 0, 10deg) scale(1.1);
+}
+
+.skill-card:hover>.skill-description {
+    display: block;
+    transition: 0.3s;
+}
+
+.skill-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.skill-description {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: rgb(14, 15, 17);
+    background: linear-gradient(0deg, rgba(14, 15, 17, 0.7) 0%, rgba(247, 99, 99, 0) 100%);
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.skill-name-container {
+    display: block;
+    font-family: WremenaRegular;
+    font-weight: bold;
+    color: #e9dfce;
+    position: absolute;
+    margin-top: -100%;
+    margin-left: 80%;
+    font-size: 75px;
+    opacity: 1;
 }
