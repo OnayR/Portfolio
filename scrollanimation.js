@@ -11,6 +11,20 @@ function revealmenu() {
         menucontainer.style.display = 'block';
         line1.style.transform = 'rotate(45deg) translate(5px, 0px) scale(1.5)';
         line2.style.transform = 'rotate(-45deg) translate(5px, 0px) scale(1.5)';
+        headerlink1.style.display = 'block';
+        headerlink1.style.animation = '0.7s ease-out 0s 1 slideInFromBottom';
+        setTimeout(function () {
+            headerlink2.style.display = 'block';
+            headerlink2.style.animation = '0.7s ease-out 0s 1 slideInFromBottom';
+        }, 100);
+        setTimeout(function () {
+            headerlink3.style.display = 'block';
+            headerlink3.style.animation = '0.7s ease-out 0s 1 slideInFromBottom';
+        }, 200);
+        setTimeout(function () {
+            headerlink4.style.display = 'block';
+            headerlink4.style.animation = '0.7s ease-out 0s 1 slideInFromBottom';
+        }, 300);
     } else {
         menucontainer.style.animation = '0.7s ease-out 0s 1 slideOutToTop';
         line1.style.transform = 'rotate(0deg) translate(0px, 0px) scale(1)';
@@ -19,10 +33,6 @@ function revealmenu() {
             menucontainer.style.display = 'none';
         }, 700);
     }
-    headerlink1.style.animation = '0.7s ease-out 0s 1 slideInFromTop';
-    headerlink2.style.animation = '0.7s ease-out 0s 1 slideInFromTop';
-    headerlink3.style.animation = '0.7s ease-out 0s 1 slideInFromTop';
-    headerlink4.style.animation = '0.7s ease-out 0s 1 slideInFromTop';
     console.log(menucontainer.style.display);
 }
 
@@ -75,6 +85,38 @@ tl2.from('.skill-name-container', {
 });
 
 tl2.to('.skill-name-container', {
+    opacity: 1,
+    duration: 1,
+    x: 0,
+});
+
+let tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.skill-card2',
+        start: 'top 80%',
+        end: '30% 60%',
+        scrub: false,
+        markers: false,
+    }
+});
+
+tl3.from('.skill-card2', {
+    opacity: 0,
+    duration: 1,
+});
+
+tl3.to('.skill-card2', {
+    opacity: 1,
+    duration: 1,
+});
+
+tl3.from('.skill-name-container2', {
+    opacity: 0,
+    duration: 1,
+    x: 100,
+});
+
+tl3.to('.skill-name-container2', {
     opacity: 1,
     duration: 1,
     x: 0,
