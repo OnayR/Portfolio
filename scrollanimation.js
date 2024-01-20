@@ -26,6 +26,23 @@ function revealmenu() {
             headerlink4.style.animation = '0.7s ease-out 0s 1 slideInFromBottom';
         }, 300);
     } else {
+
+        headerlink1.style.animation = '0.7s ease-out 0s 1 return';
+        setTimeout(function () {
+            headerlink1.style.display = 'none';
+        }, 700);
+        headerlink2.style.animation = '0.7s ease-out 0s 1 return';
+        setTimeout(function () {
+            headerlink2.style.display = 'none';
+        }, 700);
+        headerlink3.style.animation = '0.7s ease-out 0s 1 return';
+        setTimeout(function () {
+            headerlink3.style.display = 'none';
+        }, 700);
+        headerlink4.style.animation = '0.7s ease-out 0s 1 return';
+        setTimeout(function () {
+            headerlink4.style.display = 'none';
+        }, 700);
         menucontainer.style.animation = '0.7s ease-out 0s 1 slideOutToTop';
         line1.style.transform = 'rotate(0deg) translate(0px, 0px) scale(1)';
         line2.style.transform = 'rotate(0deg) translate(0px, 0px) scale(1)';
