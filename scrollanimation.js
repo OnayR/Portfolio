@@ -1,3 +1,5 @@
+let body = document.querySelector('body');
+
 const line1 = document.querySelector('.line1');
 const line2 = document.querySelector('.line2');
 const menucontainer = document.querySelector('.menu-container');
@@ -5,6 +7,20 @@ const headerlink1 = document.querySelector('.link1');
 const headerlink2 = document.querySelector('.link2');
 const headerlink3 = document.querySelector('.link3');
 const headerlink4 = document.querySelector('.link4');
+
+let cursor = document.querySelector('#cursor');
+let orb1 = document.querySelector('#orb1');
+
+document.addEventListener('mousemove', e => {
+});
+
+document.addEventListener('mousemove', e => {
+    // body.style.backgroundPositionX = -e.pageX / -4 + 'px';
+    // body.style.backgroundPositionY = -e.pageY / -4 + 'px';
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+    console.log(e.pageX, e.pageY);
+});
 
 function revealmenu() {
     if (menucontainer.style.display === 'none') {
@@ -26,24 +42,16 @@ function revealmenu() {
             headerlink4.style.animation = '0.7s ease-out 0s 1 slideInFromBottom';
         }, 300);
     } else {
-
         headerlink1.style.animation = '0.7s ease-out 0s 1 return';
-        setTimeout(function () {
-            headerlink1.style.display = 'none';
-        }, 700);
         headerlink2.style.animation = '0.7s ease-out 0s 1 return';
-        setTimeout(function () {
-            headerlink2.style.display = 'none';
-        }, 700);
         headerlink3.style.animation = '0.7s ease-out 0s 1 return';
-        setTimeout(function () {
-            headerlink3.style.display = 'none';
-        }, 700);
         headerlink4.style.animation = '0.7s ease-out 0s 1 return';
         setTimeout(function () {
+            headerlink1.style.display = 'none';
+            headerlink2.style.display = 'none';
+            headerlink3.style.display = 'none';
             headerlink4.style.display = 'none';
         }, 700);
-        menucontainer.style.animation = '0.7s ease-out 0s 1 slideOutToTop';
         line1.style.transform = 'rotate(0deg) translate(0px, 0px) scale(1)';
         line2.style.transform = 'rotate(0deg) translate(0px, 0px) scale(1)';
         setTimeout(function () {
@@ -73,68 +81,4 @@ tl.to('.description', {
     opacity: 1,
     duration: 1,
     y: 0,
-});
-
-let tl2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.skill-card',
-        start: 'top 80%',
-        end: '30% 60%',
-        scrub: false,
-        markers: false,
-    }
-});
-
-tl2.from('.skill-card', {
-    opacity: 0,
-    duration: 1,
-});
-
-tl2.to('.skill-card', {
-    opacity: 1,
-    duration: 1,
-});
-
-tl2.from('.skill-name-container', {
-    opacity: 0,
-    duration: 1,
-    x: -100,
-});
-
-tl2.to('.skill-name-container', {
-    opacity: 1,
-    duration: 1,
-    x: 0,
-});
-
-let tl3 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.skill-card2',
-        start: 'top 80%',
-        end: '30% 60%',
-        scrub: false,
-        markers: false,
-    }
-});
-
-tl3.from('.skill-card2', {
-    opacity: 0,
-    duration: 1,
-});
-
-tl3.to('.skill-card2', {
-    opacity: 1,
-    duration: 1,
-});
-
-tl3.from('.skill-name-container2', {
-    opacity: 0,
-    duration: 1,
-    x: 100,
-});
-
-tl3.to('.skill-name-container2', {
-    opacity: 1,
-    duration: 1,
-    x: 0,
 });

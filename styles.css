@@ -29,6 +29,17 @@ a {
     color: #e9dfce;
 }
 
+#cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background: rgb(14, 15, 17);
+    background: radial-gradient(circle, rgba(233, 223, 206, 0.5) 0%, rgba(255, 0, 0, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    pointer-events: none;
+}
+
 .lastname {
     font-family: WremenaRegular;
     font-weight: bold;
@@ -80,6 +91,17 @@ a {
 
 }
 
+@keyframes slideOutToTop {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+
+}
+
 @keyframes return {
     0% {
         transform: translateY(0);
@@ -93,7 +115,7 @@ a {
 .firstname-container {
     overflow: hidden;
     height: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .lastname-container {
@@ -128,7 +150,7 @@ a {
 
 .menu-container {
     display: none;
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     background-color: #1e2125;
