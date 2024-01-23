@@ -30,6 +30,7 @@ a {
 }
 
 #cursor {
+    margin: 0;
     position: fixed;
     width: 25px;
     height: 25px;
